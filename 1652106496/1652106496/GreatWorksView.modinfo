@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mod id="bcdbbbea-984f-474c-b921-6ea0be143600" version="1">
+  <Properties>
+    <Name>Great Works Viewer</Name>
+    <Description>Improves the Great Works view by:[NEWLINE]Sort by building type to get similar works close to each other.[NEWLINE]Expand view to your screen size.</Description>
+    <Teaser>Better Great Works view</Teaser>
+    <Authors>Peter Spjuth</Authors>
+    <AffectsSavedGames>0</AffectsSavedGames>
+  </Properties>
+  <InGameActions>
+    <ImportFiles id="NewAction">
+      <File>greatworksoverview.lua</File>
+      <File>greatworksoverview.xml</File>
+    </ImportFiles>
+  </InGameActions>
+  <Files>
+    <File>greatworksoverview.lua</File>
+    <File>greatworksoverview.xml</File>
+  </Files>
+</Mod>

@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Mod id="382a187f-c8ba-4094-a6a7-0d5315661f32" version="1">
+  <Properties>
+    <Name>Extended Diplomacy Ribbon</Name>
+    <Stability>Final</Stability>
+    <Teaser>A better diplomacy ribbon with extended information.</Teaser>
+    <Description>This mod extends the Diplomacy Ribbon to display all the relevant diplomatic information in one place. All the information displayed is available in-game in vanilla Civ6, but in different places of the UI and not readily at hand. EDR combines all that information into a simple, readable and always present combination of tooltips, mouse overs and clicks. An essential mod for every serious diplomat.</Description>
+    <Authors>Aristos</Authors>
+    <AffectsSavedGames>0</AffectsSavedGames>
+	<CompatibleVersions>2.0</CompatibleVersions>
+  </Properties>
+  
+  <ActionCriteria>
+		<Criteria id="Vanilla">
+			<RuleSetInUse>RULESET_STANDARD</RuleSetInUse>
+		</Criteria>
+		<Criteria id="Expansion1">
+			<GameCoreInUse>Expansion1</GameCoreInUse>
+		</Criteria>
+		<Criteria id="Expansion2">
+			<GameCoreInUse>Expansion2</GameCoreInUse>
+		</Criteria>
+		
+  </ActionCriteria>
+
+  <InGameActions>
+	
+    <ImportFiles id="EDR_IMPORT_FILES">
+	  <Properties>
+        <LoadOrder>13000</LoadOrder>
+      </Properties>
+      <Items>
+		<File>ExtendedDiplomacyRibbon.lua</File>
+		<File>leadericon.xml</File>
+		<File>DiplomacyDealView.xml</File>
+      </Items>
+    </ImportFiles>
+	<ImportFiles id="EDR_IMPORT_FILES_VANILLA" criteria="Vanilla">
+	  <Properties>
+        <LoadOrder>13001</LoadOrder>
+      </Properties>
+      <Items>
+		<File>Vanilla_XP1/DiplomacyDealView.lua</File>
+		<File>Vanilla_XP1/DiplomacyActionView.xml</File>
+      </Items>
+    </ImportFiles>
+	<ImportFiles id="EDR_IMPORT_FILES_RaF" criteria="Expansion1">
+	  <Properties>
+        <LoadOrder>13001</LoadOrder>
+      </Properties>
+      <Items>
+		<File>Vanilla_XP1/DiplomacyDealView.lua</File>
+		<File>Vanilla_XP1/DiplomacyActionView.xml</File>
+      </Items>
+    </ImportFiles>
+	<ImportFiles id="EDR_IMPORT_FILES_GS" criteria="Expansion2">
+	  <Properties>
+        <LoadOrder>13001</LoadOrder>
+      </Properties>
+      <Items>
+		<File>XP2/DiplomacyDealView.lua</File>
+		<File>XP2/DiplomacyDealView_Expansion2.lua</File>
+		<File>XP2/EDR_DiplomacyRibbon_Expansion2.lua</File>
+		<File>XP2/DiplomacyActionView.xml</File>
+      </Items>
+    </ImportFiles>
+	<ReplaceUIScript id="ExtendedDiplomacyRibbon_Vanilla" criteria="Vanilla">
+		<Properties>
+			<LoadOrder>13002</LoadOrder>
+			<LuaContext>DiplomacyRibbon</LuaContext>
+			<LuaReplace>ExtendedDiplomacyRibbon.lua</LuaReplace>
+		</Properties>
+	</ReplaceUIScript>
+	<ReplaceUIScript id="ExtendedDiplomacyRibbon_RaF" criteria="Expansion1">
+		<Properties>
+			<LoadOrder>13002</LoadOrder>
+			<LuaContext>DiplomacyRibbon</LuaContext>
+			<LuaReplace>ExtendedDiplomacyRibbon.lua</LuaReplace>
+		</Properties>
+	</ReplaceUIScript>
+	<ReplaceUIScript id="ExtendedDiplomacyRibbon_GS" criteria="Expansion2">
+		<Properties>
+			<LoadOrder>13002</LoadOrder>
+			<LuaContext>DiplomacyRibbon</LuaContext>
+			<LuaReplace>XP2/EDR_DiplomacyRibbon_Expansion2.lua</LuaReplace>
+		</Properties>
+	</ReplaceUIScript>
+	<ReplaceUIScript id="EDR_DiplomacyDealView_GS" criteria="Expansion2">
+		<Properties>
+			<LoadOrder>13003</LoadOrder>
+			<LuaContext>DiplomacyDealView</LuaContext>
+			<LuaReplace>XP2/DiplomacyDealView_Expansion2.lua</LuaReplace>
+		</Properties>
+	</ReplaceUIScript>
+  </InGameActions>
+
+  <Files>
+	<File>ExtendedDiplomacyRibbon.lua</File>
+	<File>leadericon.xml</File>
+	<File>DiplomacyDealView.xml</File>
+	<File>Vanilla_XP1/DiplomacyDealView.lua</File>
+	<File>Vanilla_XP1/DiplomacyActionView.xml</File>
+	<File>XP2/DiplomacyDealView.lua</File>
+	<File>XP2/DiplomacyDealView_Expansion2.lua</File>
+	<File>XP2/EDR_DiplomacyRibbon_Expansion2.lua</File>
+	<File>XP2/DiplomacyActionView.xml</File>
+  </Files>
+</Mod>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GameData>
+    <EnglishText>
+        <Row Tag="LOC_QD_NAME">
+            <Text>Quick Deals</Text>
+        </Row>
+        <Row Tag="LOC_QD_SALE">
+            <Text>Sale</Text>
+        </Row>
+        <Row Tag="LOC_QD_EACH">
+            <Text>Each</Text>
+        </Row>
+        <Row Tag="LOC_QD_NO_AVAILABLE_DEAL">
+            <Text>No available deals.</Text>
+        </Row>
+        <Row Tag="LOC_QD_NEW_DEALS_AVAILABLE">
+            <Text>New deals available.</Text>
+        </Row>
+        <Row Tag="LOC_QD_ALL_GOLD_HINT">
+            <Text>They offered all available gold.</Text>
+        </Row>
+        <Row Tag="LOC_QD_BULK_ADD">
+            <Text>[COLOR_Civ6Red]Hold Ctrl key to add more.[ENDCOLOR]</Text>
+        </Row>
+        <Row Tag="LOC_QD_CONVERT_ALL">
+            <Text>Right click to convert all.</Text>
+        </Row>
+    </EnglishText>
+</GameData>
